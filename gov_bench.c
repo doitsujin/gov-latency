@@ -91,7 +91,7 @@ void execute_loop(uint64_t loop_iterations) {
   // complete on most CPUs, give or take a few.
   asm volatile (
     "mov  %0, %%rcx;"
-    ".align 16; 1:"
+    ".align 32; 1:"
     "sub  $1, %%rcx;"
     "sub  $1, %%rcx;"
     "jnz 1b;"
