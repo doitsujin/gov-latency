@@ -3,9 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define LOOP_CYCLES 500000ul
-#define ONE_SEC     1000000000ul
-#define ONE_MSEC    1000000ul
+#define ONE_SEC  1000000000ul
+#define ONE_MSEC 1000000ul
 
 typedef struct timespec timespec_t;
 
@@ -87,8 +86,7 @@ uint64_t parse_number(char* number) {
 
 
 void execute_loop(uint64_t loop_iterations) {
-  // Loop that takes about LOOP_CYCLES cycles to
-  // complete on most CPUs, give or take a few.
+  // 2 cycles per iteration on most CPUs
   asm volatile (
     "mov  %0, %%rcx;"
     ".align 32; 1:"
