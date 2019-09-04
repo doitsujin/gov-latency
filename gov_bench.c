@@ -101,7 +101,6 @@ void execute_loop(uint64_t loop_iterations) {
 
 
 int main(int argc, char** argv) {
-  
   // The number of measurements to make
   // can be passed as an argument
   const size_t entry_count_default = 2000;
@@ -152,5 +151,4 @@ int main(int argc, char** argv) {
   entry_buffer_print  (&entry_buffer);
   entry_buffer_destroy(&entry_buffer);
   return 0;
-  
 }
